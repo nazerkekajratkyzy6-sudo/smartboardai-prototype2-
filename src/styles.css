@@ -1,0 +1,26 @@
+:root{
+  --bg:#eef1f7;
+  --panel: rgba(255,255,255,0.88);
+  --accent1:#7a73ff;
+  --accent2:#57c6ff;
+  --muted:#7c8799;
+  --radius:16px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Segoe UI,Arial;background:linear-gradient(180deg,#f3f6fb,#eef3ff)}
+.app{display:flex;height:100vh}
+.sidebar{width:84px;padding:16px;background:var(--panel);border-right:1px solid rgba(255,255,255,0.5);backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;border-top-right-radius:16px;border-bottom-right-radius:16px}
+.icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:8px 0;cursor:pointer;color:var(--muted);transition:all .2s}
+.icon:hover{transform:translateY(-4px);background:rgba(255,255,255,0.6)}
+.icon.active{background:linear-gradient(135deg,var(--accent1),var(--accent2));color:white;box-shadow:0 8px 24px rgba(118,111,255,0.18);transform:scale(1.03)}
+.main{flex:1;padding:20px;display:flex;flex-direction:column;gap:12px}
+.header{display:flex;justify-content:space-between;align-items:center;background:var(--panel);padding:12px 18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.board-area{display:flex;flex:1;gap:18px}
+.canvas{flex:1;min-height:520px;background:var(--panel);border-radius:12px;padding:18px;box-shadow:0 10px 40px rgba(0,0,0,0.06);border:1px solid rgba(255,255,255,0.6);overflow:auto}
+.sidepanel{width:380px;background:var(--panel);border-radius:12px;padding:16px;box-shadow:0 10px 40px rgba(0,0,0,0.06)}
+.card{background:rgba(255,255,255,0.9);padding:12px;border-radius:12px;margin-bottom:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.button{background:linear-gradient(135deg,var(--accent1),var(--accent2));color:white;border:none;padding:10px 14px;border-radius:10px;cursor:pointer}
+.small{font-size:13px;color:var(--muted)}
+.theme-preview{height:56px;border-radius:10px;border:1px solid rgba(0,0,0,0.03);display:flex;align-items:center;justify-content:center}
+.qr{display:flex;gap:8px;align-items:center}
+.ai-output{white-space:pre-wrap;background:rgba(245,250,255,0.9);padding:10px;border-radius:10px;border-left:4px solid var(--accent2)}
